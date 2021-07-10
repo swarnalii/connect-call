@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+		/>
+		<meta name="description" content="Connect - A free video call app for the web." />
+		<meta
+			name="keywords"
+			content="group video chat, video communication, multiparty video chat, video chat, webrtc, peer to peer, p2p"
+		/>
+		<meta name="application-name" content="Connect" />
+		<link rel="icon" href="/video-call.png" />
+		<link rel="stylesheet" href="/styles.css" />
+		<script defer src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+		<script defer src="/socket.io/socket.io.js"></script>
+		<script defer src="vue.min.js"></script>
+		<script defer src="app.js"></script>
+		<script defer src="script.js"></script>
+		<title>Connect</title>
+		<!-- Below line is an alytics script. Delete it if you are deploying it on your own cloud  -->
+		<script async defer src="https://stats.usetalk.io/hello.js"></script>
+	</head>
+
+	<body>
+		<section id="videos"></section>
+		<main id="app" v-bind:style="'display:block'">
+			<div id="intro" v-if="showIntro && !showChat && !showSettings">
+				<div id="heading">
+					<img src="./images/image2.png" class= "img" alt="img">
+					<strong>Connect</strong>
+				</div>
+				<p>
+					<small>
+						<i>Share this link to get started </i><br />
+						<span class="roomLink">{{roomLink}}</span>
+						<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Copy"}}</a>
+					</small>
+				</p>
+			</div>
+
+			<div id="chatWrap" v-if="showChat">
+				<div id="chats">
+					<div class="chat" v-for="(chat, i) in chats" v-bind:key="i">
+						<span class="name">{{chat.name}}</span>
+						<span class="date light"> &middot; {{formatDate(chat.date)}}</span>
+						<div class="message">{{chat.message}}</div>
+					</div>
+					<div id="noChat" class="light" v-if="!chats.length"><small>No chat messages.</small></div>
+				</div>
+				<div id="composeBox">
+					<div id="placeholder" v-if="typing.length <= 0">Type message...</div>
+					<div
+						id="compose"
+						contenteditable="true"
+						v-on:keydown.enter="sendChat"
+						v-on:input="edit($event)"
+						v-on:paste="paste($event)"
+					></div>
+				</div>
+				<small class="light">Press enter to submit</small>
+			</div>
+
+			<div id="settings" v-if="showSettings">
+				<div class="label">Camera</div>
+				<div v-for="(videoDevice, i) in videoDevices" v-bind:key="videoDevice.deviceId">
+					<div
+						v-bind:class="'link '+(selectedVideoDeviceId === videoDevice.deviceId ? 'active' : '')"
+						v-on:click="changeCamera(videoDevice.deviceId)"
+					>
+						{{videoDevice.label}}
+					</div>
+				</div>
+
+				<div class="label">Microphone</div>
+				<div v-for="(audioDevice, i) in audioDevices" v-bind:key="audioDevice.deviceId">
+					<div
+						v-bind:class="'link '+(selectedAudioDeviceId === audioDevice.deviceId ? 'active' : '')"
+						v-on:click="changeMicrophone(audioDevice.deviceId)"
+					>
+						{{audioDevice.label}}
+					</div>
+				</div>
+
+				<div class="label">Name</div>
+				<input type="text" placeholder="Your name" v-model="name" v-on:keyup="nameToLocalStorage" />
+
+				<div class="copy link" v-on:click="copyURL">{{copyText || "Copy room link"}}</div>
+				</div>
+			</div>
+
+			<div id="actionsWrap" v-bind:class="hideToolbar ? 'hidden' : ''">
+				<div id="actions">
+					<button v-bind:class="'icon-mic'+(audioEnabled ? '' : '-off')" v-on:click="audioToggle"></button>
+					<button v-bind:class="'icon-video'+(videoEnabled ? '' : '-off')" v-on:click="videoToggle"></button>
+					<button
+						v-bind:class="'icon-message-square '+(showChat ? 'active' : '')"
+						v-on:click="showChat = !showChat"
+					></button>
+					<button
+						v-bind:class="'icon-monitor '+(screenshareEnabled ? 'active' : '')"
+						v-on:click="screenShareToggle"
+					></button>
+					<button
+						v-bind:class="'icon-more-horizontal '+(showSettings ? 'active' : '')"
+						v-on:click="showSettings = !showSettings"
+					></button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
