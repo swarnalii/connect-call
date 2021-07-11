@@ -20,6 +20,10 @@ body {
     z-index: 2;
 }
 
+.top{
+    margin: 2px;
+}
+
 .img{
     margin: 10px;;
     width: 15%;
@@ -41,7 +45,7 @@ body {
 
 .area{
     
-    background-image: linear-gradient(to left, #ffc6db, #ffc0d7, #ffbbd4, #ffb5d0, #ffafcc);
+    background-image: linear-gradient(to right, #ffc6db, #ffc0d7, #ffbbd4, #ffb5d0, #ffafcc);
     /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
     width: 100%;
     height:100vh; 
