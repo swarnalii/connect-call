@@ -25,8 +25,8 @@ body {
 }
 
 .img{
-    margin: 10px;;
-    width: 15%;
+    margin: 10px;
+    width: 18%;
 }
 
 .button{
@@ -47,7 +47,6 @@ body {
     background: #32457e;
 }
 .area{
-    
     background-image: linear-gradient(to right, #ffc6db, #ffc0d7, #ffbbd4, #ffb5d0, #ffafcc);
     /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);   */
     width: 100%;

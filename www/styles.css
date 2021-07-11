@@ -118,6 +118,14 @@ input {
 #heading .img{
 	width: 45%;
 }
+
+#heading .context{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 #intro .roomLink {
 	text-decoration: underline;
 	text-decoration-style: dashed;
