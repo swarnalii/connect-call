@@ -25,7 +25,6 @@ input {
 	color: #878787;
 }
 
-
 .video {
 	float: left;
 	width: 25vw;
@@ -138,7 +137,7 @@ input {
 	background: #39393A;
 	color: white;
 	position: fixed;
-	bottom: 6rem;
+	top: 1.5rem;
 	left: 0px;
 	right: 0px;
 	z-index: 100;
@@ -152,7 +151,7 @@ input {
 #chatWrap #chats {
 	overflow-y: auto;
 	overflow: auto;
-	max-height: 240px;
+	max-height: 450px;
 	margin: auto;
 	background: #39393A;
 	color: white;

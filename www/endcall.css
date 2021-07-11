@@ -43,6 +43,9 @@ body {
     color: white;
 }
 
+.button:hover{
+    background: #32457e;
+}
 .area{
     
     background-image: linear-gradient(to right, #ffc6db, #ffc0d7, #ffbbd4, #ffb5d0, #ffafcc);
