@@ -61,6 +61,9 @@ input {
 	margin: auto;
 	box-sizing: border-box;
 	object-fit: cover;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
 }
 
 .video:fullscreen video {
@@ -280,10 +283,10 @@ input {
 #actions button.icon-more-horizontal{
 	color: white;
 }
-/* #actions button.icon-call_end{
+#actions button.icon-call_end{
 	background-color: #9D2F42;
 	color: white;
-} */
+}
 
 #actions button.icon-mic-off,
 #actions button.icon-video-off {
