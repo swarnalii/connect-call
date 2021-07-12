@@ -25,6 +25,6 @@ A video calling application built using webRTC and socket.
 ![endCall-page](https://github.com/swarnalii/connect-call/blob/main/imgs/endCall.png)
 
 
-![Link to the presentation](https://docs.google.com/presentation/d/1kaEKs6AwtHho0aQQarlb_QneTzoGqpaKH6s645KMzvw/edit?usp=sharing)
+[Link to the presentation](https://docs.google.com/presentation/d/1kaEKs6AwtHho0aQQarlb_QneTzoGqpaKH6s645KMzvw/edit?usp=sharing)
 
 
