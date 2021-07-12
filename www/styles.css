@@ -60,6 +60,12 @@ input {
 	margin: auto;
 	box-sizing: border-box;
 	object-fit: cover;
+	/* transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg); */
+}
+
+.video video.mirror {
 	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
@@ -227,7 +233,7 @@ input {
 	margin: auto;
 	box-sizing: border-box;
 	border-radius: 1rem;
-	max-height: 26rem;
+	max-height: 28rem;
 	overflow-y: auto;
 }
 #settings .label {
@@ -282,6 +288,22 @@ input {
 	box-sizing: border-box;
 	transition: opacity 250ms;
 }
+/* #actions span{
+	font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    bottom: 3px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 0; 
+}
+
+#actions button:hover span, a.button:hover span{ 
+	width:auto; 
+	padding: 5px 7px;
+	overflow:visible; 
+} */
 #actions button, a.button{
 	flex: 1;
 	background: none;

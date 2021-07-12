@@ -85,7 +85,10 @@
 				</div>
 				<div class="label">Name</div>
 				<input type="text" placeholder="Your name" v-model="name" v-on:keyup="nameToLocalStorage" />
-
+				<div class="copy link" v-on:click="toggleSelfVideoMirror">
+					Mirror / Unmirror
+					<small class="light">(self-view)</small>
+				</div>
 				<div class="copy link" v-on:click="copyURL">{{copyText || "Copy room link"}}</div>
 				</div>
 			</div>
@@ -107,7 +110,6 @@
 						v-on:click="showSettings = !showSettings"
 					></button>
 					<a href="./whiteboard.html" target="_blank" class="button icon-clipboard"></a>
-					<!-- <button onclick="href='./whiteboard.html'" target="_blank" class="icon-clipboard"></button> -->
 					<button onclick="document.location='./endCall.html';" class="icon-call_end"></button>
 				</div>
 			</div>

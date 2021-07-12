@@ -40,6 +40,9 @@ const App = new Vue({
 			localMediaStream.getVideoTracks()[0].enabled = !localMediaStream.getVideoTracks()[0].enabled;
 			this.videoEnabled = !this.videoEnabled;
 		},
+		toggleSelfVideoMirror: function() {
+			document.querySelector("#videos .video #selfVideo").classList.toggle("mirror");
+		},
 		nameToLocalStorage: function() {
 			window.localStorage.name = this.name;
 		},
@@ -71,8 +74,7 @@ const App = new Vue({
 					const newStream = new MediaStream([screenStream.getVideoTracks()[0], localMediaStream.getAudioTracks()[0]]);
 					localMediaStream = newStream;
 					attachMediaStream(document.getElementById("selfVideo"), newStream);
-					
-
+					this.toggleSelfVideoMirror();
 					screenStream.getVideoTracks()[0].onended = function() {
 						if (App.screenshareEnabled) App.screenShareToggle();
 					};
