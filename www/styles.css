@@ -282,7 +282,7 @@ input {
 	box-sizing: border-box;
 	transition: opacity 250ms;
 }
-#actions button {
+#actions button, a.button{
 	flex: 1;
 	background: none;
 	border: none;
@@ -291,7 +291,12 @@ input {
 	cursor: pointer;
 	margin: auto;
 }
-#actions button:hover {
+
+#actions a {
+	text-decoration: none;
+}
+
+#actions button:hover, a.button:hover {
 	background: #1E1E1E;
 }
 #actions button.active {
@@ -302,7 +307,8 @@ input {
 #actions button.icon-video, 
 #actions button.icon-message-square,
 #actions button.icon-monitor,
-#actions button.icon-more-horizontal{
+#actions button.icon-more-horizontal,
+#actions a.icon-clipboard{
 	color: white;
 }
 #actions button.icon-call_end{
