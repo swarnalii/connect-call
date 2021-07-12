@@ -109,6 +109,20 @@ input {
 	border-radius: 1rem;
 	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.16), 0px 1px 4px rgba(0, 0, 0, 0.16);
 }
+
+#intro .intro-btn{
+	background-color: Transparent;
+    background-repeat:no-repeat;
+	font-size: 23px;
+    border: none;
+    cursor:pointer;
+    outline:none;
+	position: absolute;
+    top: 0;
+    right: 0;
+	margin-top: 11px;
+    margin-right: 13px;
+}
 #heading{
 	display: flex;
 	flex-direction: column;
@@ -119,7 +133,7 @@ input {
 	width: 45%;
 }
 
-#heading .context{
+#intro .context{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -159,7 +173,7 @@ input {
 #chatWrap #chats {
 	overflow-y: auto;
 	overflow: auto;
-	max-height: 450px;
+	max-height: 300px;
 	margin: auto;
 	background: #39393A;
 	color: white;
@@ -283,6 +297,7 @@ input {
 #actions button.active {
 	background: #1E1E1E;
 }
+#intro button.icon-cross,
 #actions button.icon-mic,
 #actions button.icon-video, 
 #actions button.icon-message-square,

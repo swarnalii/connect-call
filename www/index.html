@@ -26,7 +26,8 @@
 	<body>
 		<section id="videos"></section>
 		<main id="app" v-bind:style="'display:block'">
-			<div id="intro" v-if="showIntro && !showChat && !showSettings">
+			<div id="intro" v-if="showIntro">
+				<button onclick="hideIntro()" class="icon-cross intro-btn"></button>
 				<div id="heading">
 					<img src="./images/image2.png" class= "img" alt="img">
 					<strong>Connect</strong>
@@ -82,7 +83,6 @@
 						{{audioDevice.label}}
 					</div>
 				</div>
-
 				<div class="label">Name</div>
 				<input type="text" placeholder="Your name" v-model="name" v-on:keyup="nameToLocalStorage" />
 
@@ -111,5 +111,15 @@
 				</div>
 			</div>
 		</main>
+		<script>
+			function hideIntro() {
+				var x = document.getElementById("intro");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+				}
+		</script>
 	</body>
 </html>

@@ -78,7 +78,7 @@ const App = new Vue({
 					};
 				})
 				.catch((e) => {
-					alert("Unable to share screen. Please use a supported browser.");
+					alert("Unable to share screen.");
 					console.error(e);
 				});
 		},
