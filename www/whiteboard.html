@@ -5,16 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/video-call.png" />
+    <link href="./whiteboard/normalize.css" type="text/css" rel="stylesheet">
+    <link href="./whiteboard/style.css" type="text/css" rel="stylesheet">
     <title>Connect</title>
-</head>
-<body>
-    <script src="./whiteboard/utils.js"></script>
-    <script src="./whiteboard/whiteboard.js"></script>
-    <script>
-        var settings = {
-            //
-        };
-        whiteboard.init(settings);
-    </script>
-</body>
-</html>
+    </head>
+    <body>
+        <header>
+            <h1>WhiteBoard</h1>
+        </header>
+        
+        <div class="panel">
+            <div id="colorSelect">
+                <label for='color'>Color:</label>
+                <input class="color" id="color"></input>
+            </div>
+
+            <div id="sizeSelect">
+                <label for='thick-menu'>Thickness:</label>
+                <select class="thick-choice" id="thick-menu">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+
+            <div id="buttons">
+                <button class="eraser">Eraser</button>
+                <button class="clear">Clear</button>
+            </div>
+        </div>
+
+        <noscript>
+            <div class="no-script">
+                <p>Note: Please enable Javascript</p>
+            </div>
+        </noscript>
+
+        <canvas class="canvas-main" width="1280" height="720"></canvas>
+        <script src="./whiteboard/jscolor/jscolor.js"></script>
+        <script src="./whiteboard/script.js"></script>
+    </body>
+</html
