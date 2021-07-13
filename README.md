@@ -35,14 +35,6 @@ This project is made as a submission to  Microsoft Engage 2021 Program. It is a 
 
 ![endCall-page](https://github.com/swarnalii/connect-call/blob/main/imgs/endCall.png)
 
-### Running this on local device:
-
-- Fork this repo and clone it in your device
-- Change the directory by running `cd connect-call` in the terminal
-- Install dependencies using the command `npm install`
-- Run the app using `npm start` command
-- It will start locally on http://localhost:3000/ .
-
 ### [Link to the presentation](https://docs.google.com/presentation/d/1kaEKs6AwtHho0aQQarlb_QneTzoGqpaKH6s645KMzvw/edit?usp=sharing)
 
 ### Resources:
