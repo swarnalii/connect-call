@@ -41,9 +41,9 @@ This project is made as a submission to  Microsoft Engage 2021 Program. It is a 
 - Change the directory by running `cd connect-call` in the terminal
 - Install dependencies using the command `npm install`
 - Run the app using `npm start` command
-- It will start locally http://localhost:3000/ .
+- It will start locally on http://localhost:3000/ .
 
-[Link to the presentation](https://docs.google.com/presentation/d/1kaEKs6AwtHho0aQQarlb_QneTzoGqpaKH6s645KMzvw/edit?usp=sharing)
+### [Link to the presentation](https://docs.google.com/presentation/d/1kaEKs6AwtHho0aQQarlb_QneTzoGqpaKH6s645KMzvw/edit?usp=sharing)
 
 ### Resources:
 
